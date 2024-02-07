@@ -1,0 +1,14 @@
+{
+"persons": [
+  {
+    "nume": "Ion",
+    "prenume": "Popescu",
+    "varsta": 20
+  },
+  {
+    "nume": "Mark",
+    "prenume": "James",
+    "varsta": 20
+  }
+]
+}
