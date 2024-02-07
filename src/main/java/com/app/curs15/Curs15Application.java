@@ -12,12 +12,12 @@ public class Curs15Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Curs15Application.class, args);
-        ExtractPersons extractPersons = new ExtractPersons();
-        try {
-            extractPersons.extractPersons();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        ExtractPersons extractPersons = new ExtractPersons();
+//        try {
+//            extractPersons.extractPersons();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }
