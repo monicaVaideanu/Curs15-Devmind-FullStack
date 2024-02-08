@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class Home {
 
     @PostMapping(value = "/messages")
-    public ResponseEntity<String> getMessage(@Valid @RequestBody Message message, @RequestHeader String authentication) {
+    public ResponseEntity<String> postMessage(@Valid @RequestBody Message message, @RequestHeader String authentication) {
         if (!authentication.equals("devmind-api-key")) {
             throw new AuthenticationException("Authentication failed.");
         }
