@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "63b3987d-049d-4305-acd8-7683fb679b95",
+		"name": "DevmindHomeworkCurs15",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27727347"
+	},
+	"item": [
+		{
+			"name": "Valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authentication",
+						"value": "devmind-api-key",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"Ion Popescu\",\n    \"receiver\": \"Dan Ionescu\",\n    \"text\": \"Salut! Ce mai faci?\",\n    \"seen\": false,\n    \"sentDate\": \"2022-03-27T11:34:40+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing Header",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"Ion Popescu\",\n    \"receiver\": \"Dan Ionescu\",\n    \"text\": \"Salut! Ce mai faci?\",\n    \"seen\": false,\n    \"sentDate\": \"2022-03-27T11:34:40+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Authentication Header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authentication",
+						"value": "invalid",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"Ion Popescu\",\n    \"receiver\": \"Dan Ionescu\",\n    \"text\": \"Salut! Ce mai faci?\",\n    \"seen\": false,\n    \"sentDate\": \"2022-03-27T11:34:40+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing fields from body",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authentication",
+						"value": "devmind-api-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"\",\n    \"receiver\": \"\",\n    \"text\": \"Salut! Ce mai faci?\",\n    \"seen\": false,\n    \"sentDate\": \"2022-03-27T11:34:40+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
