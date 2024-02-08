@@ -12,6 +12,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Message {
     @NotBlank(message = "sender cannot be blank")
     @Size(min = 5, message = "sender must be at least 5 characters long")
